@@ -20,6 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://65b354dde3fde1862dba5606--resilient-trifle-633f6c.netlify.app",
   "eslintConfig": {
     "extends": [
       "react-app",
