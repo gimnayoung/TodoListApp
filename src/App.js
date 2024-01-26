@@ -14,7 +14,7 @@ function App() {
 
   const getTasks = async () => {
     try{
-      const response = await api.get("/task");
+      const response = await api.get("/tasks");
       setTodoList(response.data.data);
     } catch (e){
       console.log(e)
@@ -26,7 +26,7 @@ function App() {
   }, []);
   const addTodo = async () => {
     try {
-      const response = await api.post("/task", {
+      const response = await api.post("/tasks", {
         task: todoValue,
         isComplete: false,
       });
@@ -42,7 +42,7 @@ function App() {
   const deleteItem = async (id) => {
     try {
       console.log(id);
-      const response = await api.delete(`/task/${id}`);
+      const response = await api.delete(`/tasks/${id}`);
       if (response.status === 200) {
         getTasks();
       }
@@ -54,7 +54,7 @@ function App() {
   const toggleComplete = async (id) => {
     try {
       const task = todoList.find((item) => item._id === id);
-      const response = await api.put(`/task/${id}`, {
+      const response = await api.put(`/tasks/${id}`, {
         isComplete: !task.isComplete,
       });
       if (response.status === 200) {
