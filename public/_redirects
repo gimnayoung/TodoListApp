@@ -1,1 +1,1 @@
-/api/* http://todo-wep.ap-northeast-2.elasticbeanstalk.com/api/:splat 200
+/api/* http://Todo-wep.ap-northeast-2.elasticbeanstalk.com/api/:splat 200
